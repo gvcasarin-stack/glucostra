@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Glucostra - Nobel Prize Discovery for Fighting Diabetes. Special offer for USA.">
+    <meta name="robots" content="index, follow">
+    <title>Glucostra - Special Offer</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        /* Background iframe */
+        #background-iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 1;
+        }
+
+        /* Cookie overlay */
+        .cookie-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9998;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Modal */
+        .cookie-modal {
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            max-width: 520px;
+            width: 100%;
+            padding: 32px;
+            z-index: 9999;
+        }
+
+        /* Close button */
+        .cookie-close {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            font-size: 24px;
+            color: #aaa;
+            text-decoration: none;
+            line-height: 1;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .cookie-close:hover {
+            color: #333;
+        }
+
+        /* Title */
+        h2 {
+            color: #0d9488;
+            font-size: 20px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        /* Text */
+        p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        p a {
+            color: #0d9488;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Buttons */
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: block;
+        }
+
+        .btn-accept {
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+            color: white;
+            box-shadow: 0 3px 12px rgba(13, 148, 136, 0.35);
+        }
+
+        .btn-accept:hover {
+            background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+            box-shadow: 0 4px 16px rgba(13, 148, 136, 0.45);
+        }
+
+        .btn-decline {
+            background: #e5e7eb;
+            color: #4b5563;
+        }
+
+        .btn-decline:hover {
+            background: #d1d5db;
+        }
+
+        /* Links */
+        .cookie-links {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        .cookie-links a {
+            color: #0d9488;
+            text-decoration: none;
+            margin: 0 4px;
+        }
+
+        .cookie-links a:hover {
+            text-decoration: underline;
+        }
+
+        .cookie-links span {
+            color: #d1d5db;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            font-size: 11px;
+            color: #9ca3af;
+            font-style: italic;
+            line-height: 1.4;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .cookie-modal {
+                padding: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            .cookie-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Iframe - Glucostra offer (affiliate) -->
+    <iframe 
+        id="background-iframe" 
+        src="https://glucostra.com/?aff_id=1975"
+        title="Glucostra - Special Offer">
+    </iframe>
+
+    <!-- Cookie overlay + modal (pre-sell); hidden after consent -->
+    <div class="cookie-overlay" id="cookie-overlay" role="dialog" aria-label="Cookie policy">
+        <div class="cookie-modal">
+            <button type="button" class="cookie-close" id="cookie-close" aria-label="Close">&times;</button>
+            
+            <h2>Our Cookie Policy</h2>
+            
+            <p>
+                We use cookies to improve your experience, personalize content and ads, provide social media features, 
+                and analyze our traffic. By continuing, you accept our use of cookies.
+                <a href="https://glucostra.com/?aff_id=1975" target="_blank" rel="noopener">Learn more</a>
+            </p>
+            
+            <div class="cookie-buttons">
+                <button type="button" class="btn btn-accept" id="cookie-accept">Accept</button>
+                <button type="button" class="btn btn-decline" id="cookie-decline">Decline</button>
+            </div>
+            
+            <div class="cookie-links">
+                <a href="https://glucostra.com/?aff_id=1975" target="_blank" rel="noopener">Terms of Service</a>
+                <span>|</span>
+                <a href="https://glucostra.com/?aff_id=1975" target="_blank" rel="noopener">Privacy Policy</a>
+            </div>
+            
+            <p class="disclaimer">
+                The content on this website is provided "as is" without warranty. By continuing, you accept our cookie policy and terms of use.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var AFFILIATE_URL = 'https://glucostra.com/?aff_id=1975';
+            var CONSENT_KEY = 'glucostra_cookie_consent';
+            var overlay = document.getElementById('cookie-overlay');
+
+            function hideCookieOverlay() {
+                if (overlay) overlay.style.display = 'none';
+            }
+
+            function setConsent(value) {
+                try {
+                    localStorage.setItem(CONSENT_KEY, value);
+                } catch (e) {}
+                hideCookieOverlay();
+            }
+
+            function hasConsent() {
+                try {
+                    return localStorage.getItem(CONSENT_KEY) !== null;
+                } catch (e) {
+                    return false;
+                }
+            }
+
+            function init() {
+                if (hasConsent()) {
+                    hideCookieOverlay();
+                    return;
+                }
+                overlay.style.display = 'flex';
+
+                document.getElementById('cookie-accept').onclick = function () {
+                    setConsent('accepted');
+                };
+                document.getElementById('cookie-decline').onclick = function () {
+                    setConsent('declined');
+                };
+                document.getElementById('cookie-close').onclick = function () {
+                    setConsent('dismissed');
+                };
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+</body>
+</html>

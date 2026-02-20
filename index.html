@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Health Company Store - Your trusted source for health and wellness products. Take care of your health and discover the benefits of a healthier lifestyle.">
+    <meta name="robots" content="index, follow">
+    <title>Health Company Store - Health & Wellness Products</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 60px 20px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Products Section */
+        .products {
+            background: #f9fafb;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 50px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .product-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .product-card p {
+            font-size: 15px;
+            color: #6b7280;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #1f2937;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #374151;
+            transform: translateY(-1px);
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: #9ca3af;
+            padding: 50px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Health Company Store</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Health Matters</h1>
+            <p>
+                Discover quality health and wellness products designed to support your journey 
+                to a healthier, more vibrant life. Taking care of your health today brings 
+                countless benefits for your tomorrow.
+            </p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="feature">
+                    <div class="feature-icon">💪</div>
+                    <h3>Better Health</h3>
+                    <p>
+                        Investing in your health leads to increased energy, improved mood, 
+                        and a stronger immune system. Small changes today create lasting impacts.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🌟</div>
+                    <h3>Quality Products</h3>
+                    <p>
+                        We offer carefully selected health products that meet the highest 
+                        quality standards to support your wellness goals effectively.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Real Results</h3>
+                    <p>
+                        Our products are designed to deliver tangible results, helping you 
+                        achieve your health and wellness objectives with confidence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Slimmatica</h3>
+                    <p>
+                        Revolutionary weight management solution that supports your body's 
+                        natural processes. Discover the method you haven't tried yet.
+                    </p>
+                    <a href="/slimmatica" class="btn">Learn More</a>
+                </div>
+
+                <div class="product-card">
+                    <h3>More Coming Soon</h3>
+                    <p>
+                        We're continuously expanding our product line to bring you the best 
+                        in health and wellness. Stay tuned for new additions.
+                    </p>
+                    <a href="#" class="btn" style="opacity: 0.6; pointer-events: none;">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Health Company Store</h4>
+                    <p>
+                        Your trusted partner in health and wellness. We're committed to 
+                        providing quality products that support your journey to better health.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="/slimmatica">Slimmatica</a></li>
+                        <li><a href="#">Weight Management</a></li>
+                        <li><a href="#">Wellness Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#cookies">Cookie Policy</a></li>
+                        <li><a href="#disclaimer">Medical Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Health Company Store. All rights reserved. | These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
