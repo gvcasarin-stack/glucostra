@@ -1,7 +1,8 @@
 {
   "rewrites": [
     {"source": "/slimmatica", "destination": "/slimmatica/index.html"},
-    {"source": "/glucostra", "destination": "/glucostra/index.html"}
+    {"source": "/glucostra", "destination": "/glucostra/index.html"},
+    {"source": "/glucostra/", "destination": "/glucostra/index.html"}
   ],
   "headers": [
     {
